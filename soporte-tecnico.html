@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="soporte-tecnico.css">
+    <title>Empresa</title>
+</head>
+<body>
+    <div id ="header">
+    
+        <ul class="nav">
+            <h1>JD200512STORE</h1>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="computadores.html">Computadores</a></li>
+            <li><a href="servidores.html">Servidores</a></li>
+            <li><a href="celulares.html">Celulares</a></li>
+            
+            <li><a href="impresoras.html">Impresoras</a></li>
+            <li><a href="empresa.html">Empresa</a>
+                <ul>
+                    <li><a href="ingreso-clientes.html">Ingreso de Clientes</a></li>
+                    <li><a href="ingreso-productos.html">Ingreso de Productos</a></li>
+                    <li><a href="prestamos-equipos.html">Préstamos de Equipos</a></li>
+                    <li><a href="garantias.html">Garantías</a></li>
+                    <li><a href="soporte-tecnico.html">Soporte Técnico</a></li>
+                </ul>
+            </li>
+       
+        </ul>
+    
+    </div>
+    <form action="soporte-tecnico.php" method="post" onsubmit="return EnviarDatos()">
+        <h3>FORMULARIO SOPORTE TECNICO</h3>
+        <div class="form-section">
+        <label for="nombre_completo">Nombre Cliente:</label>
+        <input type="text" id="nombre_completo" name="nombre_completo" required>
+        </div>
+    
+    
+        <div class="form-section">
+            <label for="celular">Numero de Celular:</label>
+            <input type="number" id="celular" name="celular" required>
+            </div>
+        
+         <div class="form-section">
+         <label for="nombrep">Nombre del producto:</label>
+        <input type="text" id="nombrep" name="nombrep" required>
+        </div>
+
+        <div class="form-section">
+            <label for="marca">Marca:</label>
+           <input type="text" id="marca" name="marca" required>
+           </div>
+    
+        <div class="form-section">
+         <label for="fechac">Fecha de compra:</label>
+         <input type="date" id="fechac" name="fechac" required>
+        </div>
+    
+    
+        <div class="form-section">
+            <label for="problema">Problema detallado Presentado:</label>
+            <input type="text" id="problema" name="problema" required>
+           </div>
+    
+        <div class="progress-bar-container">
+            <div class="progress-bar">
+                <div class="progress-bar-inner" style="width:0;"> </div>
+            </div>
+        </div>
+    
+        <button type="submit">ENVIAR</button>
+    </form>
+    <script> 
+        //seleccionar todas las secciones del formulario//
+        const formSections=document.querySelectorAll('.form-section');
+        //seleccionar el elemento de la barra de progreso interna//
+        const ProgressBarInner=document.querySelector('.progress-bar-inner');
+        //interactuar sobre cada seccion del formulario//
+        formSections.forEach(section=>{
+            //agregar un evento listener para el evento'imput'//
+            section.addEventListener('input',updateProgressbar);
+    
+        });
+        //funcion que se llama cuando se actualiza un campo en cualquier seccion de formulario//
+        function updateProgressbar() {
+            //selecionar todas las secciones del formulario que tienen campo valido//
+            const completedSection=document.querySelectorAll('.form-section input:valid').length;
+            //obtener el total de secciones en el formulario
+            const totalSections=formSections.length;
+            //calcular el progreso en porcentaje//
+            const progress=(completedSection/totalSections)*100;
+            ProgressBarInner.style.width=`${progress}%`;
+        }
+    </script>
+</body>
+</html>

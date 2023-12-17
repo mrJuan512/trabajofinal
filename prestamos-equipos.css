@@ -1,0 +1,107 @@
+body{
+  background-color: #f5f5f5;
+}
+/* Estilos generales del menú */
+.nav {
+    
+    margin: 0;
+    padding: 0;
+    background-color: #080101; /* Color de fondo del menú principal */
+  }
+  
+  .nav li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .nav li a {
+    display: block;
+    padding: 20px 20px;
+    color: #f00505; /* Color del texto del menú principal */
+    text-decoration: none;
+  }
+  
+  .nav li:hover {
+    background-color: #cf0e0e; /* Color de fondo al pasar el ratón sobre el menú principal */
+  }
+  
+  /* Estilos del submenu */
+  .nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #bbd1d1; /* Color de fondo del submenu */
+  }
+  
+  .nav li:hover > ul {
+    display: block;
+  }
+  
+  .nav ul li {
+    display: block;
+  }
+  
+  .nav ul li a {
+    padding: 10px 20px;
+    color: #d80606; /* Color del texto del submenu */
+  }
+  
+  .nav ul li:hover {
+    background-color: #000000; /* Color de fondo al pasar el ratón sobre el submenu */
+  }
+
+  h1 {
+    font-family: 'Arial', sans-serif; /* Cambia la fuente según tu preferencia */
+    font-size: 36px; /* Tamaño de fuente */
+    color: #ffffff; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+    margin-top: 20px; /* Margen superior */
+    letter-spacing: 5px; /* Espaciado entre letras */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+  }
+
+.progress-bar-container{
+    margin-bottom: 20px;
+
+}
+
+.progress-bar{
+    width: 100%;
+    background-color: rgb(218, 13, 6);
+    border-radius: 4px;
+}
+
+.progress-bar-inner{
+    height: 10px;
+    border-radius: 4px;
+    background-color: rgb(211, 41, 11);
+    transition: width 0.3s ease-in-out;
+}
+#productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.producto {
+  border: 1px solid #dd0606;
+  padding: 20px;
+  text-align: center;
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.producto h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.descripcion-producto {
+  font-size: 16px;
+  color: #555;
+}

@@ -1,0 +1,85 @@
+body{
+  background-color: #000000;
+}
+/* Estilos generales del menú */
+.nav {
+    
+    margin: 0;
+    padding: 0;
+    background-color: #db1515; /* Color de fondo del menú principal */
+  }
+  
+  .nav li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .nav li a {
+    display: block;
+    padding: 20px 20px;
+    color: #000000; /* Color del texto del menú principal */
+    text-decoration: none;
+  }
+  
+  .nav li:hover {
+    background-color: #a02121; /* Color de fondo al pasar el ratón sobre el menú principal */
+  }
+  
+  /* Estilos del submenu */
+  .nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0c0c0c; /* Color de fondo del submenu */
+  }
+  
+  .nav li:hover > ul {
+    display: block;
+  }
+  
+  .nav ul li {
+    display: block;
+  }
+  
+  .nav ul li a {
+    padding: 10px 20px;
+    color: #000000; /* Color del texto del submenu */
+  }
+  
+  .nav ul li:hover {
+    background-color: #df0505; /* Color de fondo al pasar el ratón sobre el submenu */
+  }
+
+  h1 {
+    font-family: 'Arial', sans-serif; /* Cambia la fuente según tu preferencia */
+    font-size: 36px; /* Tamaño de fuente */
+    color: #ffffff; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+    margin-top: 20px; /* Margen superior */
+    letter-spacing: 5px; /* Espaciado entre letras */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+  }
+  .kodfun-galeri{
+    display: flex;
+    height: 20rem;
+    gap: 1rem;
+  }
+  .kodfun-galeri> div{
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4,.45,1.4);
+  }
+  .kodfun-galeri>div:hover{
+    flex: 5;
+  }
+  .descripcion-empresa {
+    font-size: 25px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 30px;
+    /* Otros estilos que desees aplicar */
+}
